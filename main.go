@@ -4,11 +4,13 @@ import (
 	"fmt"
 	"net/http"
 	"html/template"
+	"log"
 )
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	templ, err := template.ParseFiles("templates/index.html")
 	if err != nil {
+		log.Println(err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}

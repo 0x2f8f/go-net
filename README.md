@@ -1,1 +1,6 @@
-# go-net
+go-net
+===============
+Links:
+/
+/info
+/any-page
